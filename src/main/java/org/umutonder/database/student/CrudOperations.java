@@ -1,4 +1,4 @@
-package org.umutonder.database;
+package org.umutonder.database.student;
 
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
