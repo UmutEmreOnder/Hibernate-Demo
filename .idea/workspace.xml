@@ -4,7 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bfb2216f-41ba-4374-b9d0-a7e5449bea68" name="Changes" comment="Initial Commit">
+    <list default="true" id="bfb2216f-41ba-4374-b9d0-a7e5449bea68" name="Changes" comment="Rebase">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/umutonder/database/instructor/CrudOperations.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/umutonder/database/instructor/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/umutonder/entity/Instructor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/umutonder/entity/InstructorDetail.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -75,14 +79,17 @@
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/src/main/java/org/umutonder/database" />
     </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="org.umutonder.database.instructor" />
+    </key>
   </component>
-  <component name="RunManager" selected="Application.Main">
+  <component name="RunManager" selected="Application.org.umutonder.database.instructor.Main">
     <configuration name="CrudOperations" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="org.umutonder.database.CrudOperations" />
+      <option name="MAIN_CLASS_NAME" value="org.umutonder.database.student.CrudOperations" />
       <module name="Hibernate-Demo" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.umutonder.database.*" />
+          <option name="PATTERN" value="org.umutonder.database.student.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -91,11 +98,24 @@
       </method>
     </configuration>
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="org.umutonder.database.Main" />
+      <option name="MAIN_CLASS_NAME" value="org.umutonder.database.student.Main" />
       <module name="Hibernate-Demo" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.umutonder.database.*" />
+          <option name="PATTERN" value="org.umutonder.database.student.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="org.umutonder.database.instructor.Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.umutonder.database.instructor.Main" />
+      <module name="Hibernate-Demo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.umutonder.database.instructor.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -105,8 +125,9 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Main" />
-        <item itemvalue="Application.CrudOperations" />
+        <item itemvalue="Application.org.umutonder.database.instructor.Main" />
+        <item itemvalue="Application.org.umutonder.database.student.Main" />
+        <item itemvalue="Application.org.umutonder.database.CrudOperations" />
       </list>
     </recent_temporary>
   </component>
@@ -119,7 +140,7 @@
       <option name="presentableId" value="Default" />
       <updated>1658597435430</updated>
       <workItem from="1658597436826" duration="436000" />
-      <workItem from="1658597883506" duration="6452000" />
+      <workItem from="1658597883506" duration="12253000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Commit">
       <created>1658602251998</created>
@@ -128,7 +149,14 @@
       <option name="project" value="LOCAL" />
       <updated>1658602251998</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Rebase">
+      <created>1658609858912</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1658609858912</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -147,6 +175,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Initial Commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="Initial Commit" />
+    <MESSAGE value="Rebase" />
+    <option name="LAST_COMMIT_MESSAGE" value="Rebase" />
   </component>
 </project>
