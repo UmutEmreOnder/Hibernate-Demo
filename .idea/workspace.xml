@@ -4,11 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bfb2216f-41ba-4374-b9d0-a7e5449bea68" name="Changes" comment="Cascade.Remove deleted from InstructorDetail&#10;From now on, when InstructorDetail object removed the Instructor of it will stay">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/umutonder/entity/Course.java" afterDir="false" />
+    <list default="true" id="bfb2216f-41ba-4374-b9d0-a7e5449bea68" name="Changes" comment="@OneToMany - @ManyToOne&#10;Each Course has an Instructor, each Instructor can either have multiple courses or no course at all">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/umutonder/database/instructor/CrudOperations.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/umutonder/database/instructor/CrudOperations.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/umutonder/database/instructor/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/umutonder/database/instructor/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/umutonder/entity/Instructor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/umutonder/entity/Instructor.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -139,7 +136,7 @@
       <updated>1658597435430</updated>
       <workItem from="1658597436826" duration="436000" />
       <workItem from="1658597883506" duration="12866000" />
-      <workItem from="1658656104190" duration="3252000" />
+      <workItem from="1658656104190" duration="4763000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Commit">
       <created>1658602251998</created>
@@ -169,7 +166,21 @@
       <option name="project" value="LOCAL" />
       <updated>1658658893587</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="@OneToMany - @ManyToOne&#10;Each Course has an Instructor, each Instructor can either have multiple courses or no course at all">
+      <created>1658661053533</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1658661053533</updated>
+    </task>
+    <task id="LOCAL-00006" summary="@OneToMany - @ManyToOne&#10;Each Course has an Instructor, each Instructor can either have multiple courses or no course at all">
+      <created>1658661060630</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1658661060630</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -191,6 +202,7 @@
     <MESSAGE value="Rebase" />
     <MESSAGE value="@OneToOne, Bi-Directional" />
     <MESSAGE value="Cascade.Remove deleted from InstructorDetail&#10;From now on, when InstructorDetail object removed the Instructor of it will stay" />
-    <option name="LAST_COMMIT_MESSAGE" value="Cascade.Remove deleted from InstructorDetail&#10;From now on, when InstructorDetail object removed the Instructor of it will stay" />
+    <MESSAGE value="@OneToMany - @ManyToOne&#10;Each Course has an Instructor, each Instructor can either have multiple courses or no course at all" />
+    <option name="LAST_COMMIT_MESSAGE" value="@OneToMany - @ManyToOne&#10;Each Course has an Instructor, each Instructor can either have multiple courses or no course at all" />
   </component>
 </project>
