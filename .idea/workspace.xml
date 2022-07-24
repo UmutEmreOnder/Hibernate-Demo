@@ -4,12 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bfb2216f-41ba-4374-b9d0-a7e5449bea68" name="Changes" comment="Rebase">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/umutonder/database/instructor/CrudOperations.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/umutonder/database/instructor/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/umutonder/entity/Instructor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/umutonder/entity/InstructorDetail.java" afterDir="false" />
+    <list default="true" id="bfb2216f-41ba-4374-b9d0-a7e5449bea68" name="Changes" comment="@OneToOne, Bi-Directional">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/umutonder/database/instructor/CrudOperations.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/umutonder/database/instructor/CrudOperations.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/umutonder/database/instructor/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/umutonder/database/instructor/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/umutonder/entity/InstructorDetail.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/umutonder/entity/InstructorDetail.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,23 +52,23 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "/home/umut/IdeaProjects/Hibernate-Demo/src",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/umut/IdeaProjects/Hibernate-Demo/src&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "mysql"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;mysql&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src" />
@@ -126,8 +125,6 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.org.umutonder.database.instructor.Main" />
-        <item itemvalue="Application.org.umutonder.database.student.Main" />
-        <item itemvalue="Application.org.umutonder.database.CrudOperations" />
       </list>
     </recent_temporary>
   </component>
@@ -140,7 +137,8 @@
       <option name="presentableId" value="Default" />
       <updated>1658597435430</updated>
       <workItem from="1658597436826" duration="436000" />
-      <workItem from="1658597883506" duration="12253000" />
+      <workItem from="1658597883506" duration="12866000" />
+      <workItem from="1658656104190" duration="643000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Commit">
       <created>1658602251998</created>
@@ -156,7 +154,14 @@
       <option name="project" value="LOCAL" />
       <updated>1658609858912</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="@OneToOne, Bi-Directional">
+      <created>1658620442608</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1658620442608</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -176,6 +181,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Initial Commit" />
     <MESSAGE value="Rebase" />
-    <option name="LAST_COMMIT_MESSAGE" value="Rebase" />
+    <MESSAGE value="@OneToOne, Bi-Directional" />
+    <option name="LAST_COMMIT_MESSAGE" value="@OneToOne, Bi-Directional" />
   </component>
 </project>

@@ -94,8 +94,9 @@ public class CrudOperations {
             session.beginTransaction();
 
             InstructorDetail instructorDetail = getInstructorDetail(id, session);
-            session.delete(instructorDetail);
+            instructorDetail.getInstructor().setInstructorDetail(null);
 
+            session.delete(instructorDetail);
             commitTransaction(session);
 
             System.out.println("Instructor detail successfully deleted");
