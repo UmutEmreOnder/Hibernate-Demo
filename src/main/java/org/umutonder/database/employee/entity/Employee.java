@@ -1,4 +1,4 @@
-package org.umutonder.entity;
+package org.umutonder.database.employee.entity;
 
 import lombok.*;
 import javax.persistence.*;

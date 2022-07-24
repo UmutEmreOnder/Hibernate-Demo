@@ -1,4 +1,4 @@
-package org.umutonder.database.student;
+package org.umutonder.database.employee;
 
 public class Main {
     public static void main(String[] args) {

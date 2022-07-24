@@ -1,9 +1,9 @@
-package org.umutonder.database.student;
+package org.umutonder.database.employee;
 
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
-import org.umutonder.entity.Employee;
+import org.umutonder.database.employee.entity.Employee;
 
 import java.util.List;
 
