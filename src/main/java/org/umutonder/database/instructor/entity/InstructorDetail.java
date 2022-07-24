@@ -1,4 +1,4 @@
-package org.umutonder.entity;
+package org.umutonder.database.instructor.entity;
 
 import lombok.*;
 

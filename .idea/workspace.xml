@@ -4,10 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bfb2216f-41ba-4374-b9d0-a7e5449bea68" name="Changes" comment="Removed courses from ToString (Lazy Fetch)">
+    <list default="true" id="bfb2216f-41ba-4374-b9d0-a7e5449bea68" name="Changes" comment="Remove Employee package">
+      <change afterPath="$PROJECT_DIR$/diagram.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/umutonder/database/instructor/entity/Course.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/umutonder/database/instructor/entity/Review.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/umutonder/database/instructor/entity/Student.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/umutonder/database/instructor/CrudOperations.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/umutonder/database/instructor/CrudOperations.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/umutonder/database/instructor/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/umutonder/database/instructor/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/umutonder/entity/Course.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/umutonder/entity/Instructor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/umutonder/database/instructor/entity/Instructor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/umutonder/entity/InstructorDetail.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/umutonder/database/instructor/entity/InstructorDetail.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,23 +58,23 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/umut/IdeaProjects/Hibernate-Demo/src&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "/home/umut/IdeaProjects/Hibernate-Demo",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;mysql&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mysql"
     ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src" />
@@ -83,11 +90,11 @@
   </component>
   <component name="RunManager" selected="Application.org.umutonder.database.instructor.Main">
     <configuration name="CrudOperations" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="org.umutonder.database.student.CrudOperations" />
+      <option name="MAIN_CLASS_NAME" value="org.umutonder.database.employee.CrudOperations" />
       <module name="Hibernate-Demo" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.umutonder.database.student.*" />
+          <option name="PATTERN" value="org.umutonder.database.employee.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -96,11 +103,11 @@
       </method>
     </configuration>
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="org.umutonder.database.student.Main" />
+      <option name="MAIN_CLASS_NAME" value="org.umutonder.database.employee.Main" />
       <module name="Hibernate-Demo" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.umutonder.database.student.*" />
+          <option name="PATTERN" value="org.umutonder.database.employee.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -137,7 +144,7 @@
       <updated>1658597435430</updated>
       <workItem from="1658597436826" duration="436000" />
       <workItem from="1658597883506" duration="12866000" />
-      <workItem from="1658656104190" duration="6742000" />
+      <workItem from="1658656104190" duration="14806000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Commit">
       <created>1658602251998</created>
@@ -188,7 +195,28 @@
       <option name="project" value="LOCAL" />
       <updated>1658668105301</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="HQL for Lazy Implement">
+      <created>1658678712127</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1658678712127</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Rebase">
+      <created>1658696490881</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1658696490881</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Remove Employee package">
+      <created>1658698560601</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1658698560601</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -207,11 +235,13 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Initial Commit" />
-    <MESSAGE value="Rebase" />
     <MESSAGE value="@OneToOne, Bi-Directional" />
     <MESSAGE value="Cascade.Remove deleted from InstructorDetail&#10;From now on, when InstructorDetail object removed the Instructor of it will stay" />
     <MESSAGE value="@OneToMany - @ManyToOne&#10;Each Course has an Instructor, each Instructor can either have multiple courses or no course at all" />
     <MESSAGE value="Removed courses from ToString (Lazy Fetch)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Removed courses from ToString (Lazy Fetch)" />
+    <MESSAGE value="HQL for Lazy Implement" />
+    <MESSAGE value="Rebase" />
+    <MESSAGE value="Remove Employee package" />
+    <option name="LAST_COMMIT_MESSAGE" value="Remove Employee package" />
   </component>
 </project>
