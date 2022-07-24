@@ -2,6 +2,8 @@ package org.umutonder.entity;
 
 import lombok.*;
 import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.List;
 
 @RequiredArgsConstructor
 @NoArgsConstructor
@@ -32,4 +34,16 @@ public class Instructor {
     @OneToOne(cascade = {CascadeType.ALL})
     @JoinColumn(name = "instructor_detail_id")
     private InstructorDetail instructorDetail;
+
+    @OneToMany(mappedBy = "instructor", cascade = {CascadeType.PERSIST, CascadeType.MERGE, CascadeType.REFRESH, CascadeType.DETACH})
+    private List<Course> courses;
+
+    public void addCourse(Course course) {
+        if (courses == null) {
+            courses = new ArrayList<>();
+        }
+
+        courses.add(course);
+        course.setInstructor(this);
+    }
 }

@@ -3,6 +3,7 @@ package org.umutonder.database.instructor;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
+import org.umutonder.entity.Course;
 import org.umutonder.entity.Instructor;
 import org.umutonder.entity.InstructorDetail;
 
@@ -13,6 +14,7 @@ public class CrudOperations {
             .configure("hibernate.cfg.xml")
             .addAnnotatedClass(Instructor.class)
             .addAnnotatedClass(InstructorDetail.class)
+            .addAnnotatedClass(Course.class)
             .buildSessionFactory();
 
     public static void addInstructor(String firstName, String lastName, String email, String youtubeChannel, String hobby) {
@@ -28,8 +30,29 @@ public class CrudOperations {
 
         commitTransaction(session);
 
-        System.out.println("Instructor successfully added");
+        System.out.println("Instructor added successfully");
     }
+
+    public static void addCourse(String title, int instructorId) {
+        try {
+            Session session = getCurrentSession();
+
+            session.beginTransaction();
+
+            Instructor instructor = session.get(Instructor.class, instructorId);
+            Course course = new Course(title);
+            instructor.addCourse(course);
+
+            session.save(course);
+
+            session.getTransaction().commit();
+
+            System.out.println("Course added successfully");
+        } catch (NullPointerException | IllegalStateException exception) {
+            System.out.println("Attempt to add course to non-exist instructor");
+        }
+    }
+
 
 
     public static void readInstructors() {
@@ -53,7 +76,22 @@ public class CrudOperations {
             System.out.println(instructorDetail.getInstructor());
             System.out.println(instructorDetail);
 
-            session.getTransaction().commit();
+            commitTransaction(session);
+        } catch (NullPointerException | IllegalStateException exception) {
+            System.out.println("Attempt to read non-exist id");
+        }
+    }
+
+    public static void readCourses(int instructorId) {
+        try {
+            Session session = getCurrentSession();
+            session.beginTransaction();
+
+            Instructor instructor = session.get(Instructor.class, instructorId);
+
+            printList(instructor.getCourses());
+
+            commitTransaction(session);
         } catch (NullPointerException | IllegalStateException exception) {
             System.out.println("Attempt to read non-exist id");
         }
@@ -68,7 +106,7 @@ public class CrudOperations {
 
             commitTransaction(session);
 
-            System.out.println("Instructor successfully updated");
+            System.out.println("Instructor updated successfully");
         } catch (NullPointerException | IllegalStateException exception) {
             System.out.println("Attempt to update non-exist id");
         }
@@ -83,7 +121,7 @@ public class CrudOperations {
 
             commitTransaction(session);
 
-            System.out.println("Instructor successfully deleted");
+            System.out.println("Instructor deleted successfully");
         } catch (NullPointerException | IllegalArgumentException exception) {
             System.out.println("Attempt to delete non-exist id");
         }
@@ -99,7 +137,22 @@ public class CrudOperations {
             session.delete(instructorDetail);
             commitTransaction(session);
 
-            System.out.println("Instructor detail successfully deleted");
+            System.out.println("Instructor detail deleted successfully");
+        } catch (NullPointerException | IllegalArgumentException exception) {
+            System.out.println("Attempt to delete non-exist id");
+        }
+    }
+
+    public static void deleteCourse(int id) {
+        try (Session session = getCurrentSession()) {
+            session.beginTransaction();
+
+            Course course = session.get(Course.class, id);
+
+            session.delete(course);
+            commitTransaction(session);
+
+            System.out.println("Course deleted successfully");
         } catch (NullPointerException | IllegalArgumentException exception) {
             System.out.println("Attempt to delete non-exist id");
         }
