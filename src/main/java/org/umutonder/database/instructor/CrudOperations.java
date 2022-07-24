@@ -3,10 +3,12 @@ package org.umutonder.database.instructor;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
+import org.hibernate.query.Query;
 import org.umutonder.entity.Course;
 import org.umutonder.entity.Instructor;
 import org.umutonder.entity.InstructorDetail;
 
+import javax.persistence.NoResultException;
 import java.util.List;
 
 public class CrudOperations {
@@ -87,13 +89,16 @@ public class CrudOperations {
             Session session = getCurrentSession();
             session.beginTransaction();
 
-            Instructor instructor = session.get(Instructor.class, instructorId);
+            Query<Instructor> query = session.createQuery("SELECT i FROM Instructor i JOIN FETCH i.courses WHERE i.id =: theInstructorId", Instructor.class);
+            query.setParameter("theInstructorId", instructorId);
 
-            printList(instructor.getCourses());
+            Instructor instructor = query.getSingleResult();
 
             commitTransaction(session);
-        } catch (NullPointerException | IllegalStateException exception) {
-            System.out.println("Attempt to read non-exist id");
+
+            printList(instructor.getCourses());
+        } catch (NullPointerException | IllegalStateException | NoResultException exception) {
+            System.out.println("Attempt to read non-exist id or the instructor has no courses");
         }
     }
 

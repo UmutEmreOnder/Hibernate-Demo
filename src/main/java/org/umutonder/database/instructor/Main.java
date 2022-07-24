@@ -8,8 +8,7 @@ public class Main {
         // CrudOperations.deleteInstructorDetails(7); // Will not remove instructor
         // CrudOperations.addCourse("Spring", 9); // Will link the course with the given instructor id
         // CrudOperations.deleteCourse(1); // Will not remove instructor
-        // CrudOperations.readCourses(8); // Only prints the courses of the given instructor id
-
-        CrudOperations.readInstructors();
+        CrudOperations.readCourses(5); // Only prints the courses of the given instructor id
+        // CrudOperations.readInstructors();
     }
 }
