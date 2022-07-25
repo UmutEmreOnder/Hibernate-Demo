@@ -11,7 +11,7 @@ import javax.persistence.NoResultException;
 import java.util.List;
 
 public class CrudOperations {
-    private static final SessionFactory sessionFactory = new Configuration()
+    private final SessionFactory sessionFactory = new Configuration()
             .configure("hibernate.cfg.xml")
             .addAnnotatedClass(Instructor.class)
             .addAnnotatedClass(InstructorDetail.class)
@@ -20,7 +20,7 @@ public class CrudOperations {
             .addAnnotatedClass(Student.class)
             .buildSessionFactory();
 
-    public static void addInstructor(String firstName, String lastName, String email, String youtubeChannel, String hobby) {
+    public void addInstructor(String firstName, String lastName, String email, String youtubeChannel, String hobby) {
         Session session = getCurrentSession();
 
         Instructor instructor = new Instructor(firstName, lastName, email);
@@ -36,13 +36,13 @@ public class CrudOperations {
         System.out.println("Instructor added successfully");
     }
 
-    public static void addCourse(String title, int instructorId) {
+    public void addCourse(String title, int instructorId) {
         try {
             Session session = getCurrentSession();
 
             session.beginTransaction();
 
-            Instructor instructor = getInstructor(instructorId, session);
+            Instructor instructor = get(instructorId, Instructor.class, session);
             Course course = new Course(title);
             instructor.addCourse(course);
 
@@ -56,13 +56,13 @@ public class CrudOperations {
         }
     }
 
-    public static void addReview(String comment, int courseId) {
+    public void addReview(String comment, int courseId) {
         try {
             Session session = getCurrentSession();
 
             session.beginTransaction();
 
-            Course course = getCourse(courseId, session);
+            Course course = get(courseId, Course.class, session);
             Review review = new Review(comment);
             course.addReview(review);
 
@@ -76,7 +76,7 @@ public class CrudOperations {
         }
     }
 
-    public static void addStudent(String firstName, String lastName, String email, int... courseId) {
+    public void addStudent(String firstName, String lastName, String email, int... courseId) {
         Student student = new Student(firstName, lastName, email);
 
         Session session = getCurrentSession();
@@ -84,7 +84,7 @@ public class CrudOperations {
         session.save(student);
 
         for (int id : courseId) {
-            Course course = getCourse(id, session);
+            Course course = get(id, Course.class, session);
             course.addStudent(student);
         }
 
@@ -94,7 +94,7 @@ public class CrudOperations {
     }
 
 
-    public static void readInstructors() {
+    public void readInstructors() {
         Session session = getCurrentSession();
 
         session.beginTransaction();
@@ -105,14 +105,13 @@ public class CrudOperations {
         commitTransaction(session);
     }
 
-    public static void readInstructorDetail(int id) {
+    public void readInstructorDetail(int id) {
         try {
             Session session = getCurrentSession();
             session.beginTransaction();
 
-            InstructorDetail instructorDetail = getInstructorDetail(id, session);
+            InstructorDetail instructorDetail = get(id, InstructorDetail.class, session);
 
-            System.out.println(instructorDetail.getInstructor());
             System.out.println(instructorDetail);
 
             commitTransaction(session);
@@ -121,7 +120,7 @@ public class CrudOperations {
         }
     }
 
-    public static void readCoursesOfInstructor(int instructorId) {
+    public void readCoursesOfInstructor(int instructorId) {
         try {
             Session session = getCurrentSession();
             session.beginTransaction();
@@ -139,23 +138,23 @@ public class CrudOperations {
         }
     }
 
-    public static void readCourses(int courseId) {
+    public void readCourses(int courseId) {
         Session session = getCurrentSession();
         session.beginTransaction();
 
-        Course course = getCourse(courseId, session);
+        Course course = get(courseId, Course.class, session);
         System.out.println(course);
         printList(course.getStudents());
 
         session.getTransaction().commit();
     }
 
-    public static void readReviews(int courseId) {
+    public void readReviews(int courseId) {
         try {
             Session session = getCurrentSession();
             session.beginTransaction();
 
-            Course course = getCourse(courseId, session);
+            Course course = get(courseId, Course.class, session);
             printList(course.getReviews());
 
             session.getTransaction().commit();
@@ -164,12 +163,12 @@ public class CrudOperations {
         }
     }
 
-    public static void readStudent(int studentId) {
+    public void readStudent(int studentId) {
         try {
             Session session = getCurrentSession();
             session.beginTransaction();
 
-            Student student = getStudent(studentId, session);
+            Student student = get(studentId, Student.class, session);
             student.getCourses();
 
             System.out.println(student);
@@ -181,11 +180,11 @@ public class CrudOperations {
         }
     }
 
-    public static void updateInstructor(int id, String newEmail) {
+    public void updateInstructor(int id, String newEmail) {
         try (Session session = getCurrentSession()) {
             session.beginTransaction();
 
-            Instructor instructor = getInstructor(id, session);
+            Instructor instructor = get(id, Instructor.class, session);
             instructor.setEmail(newEmail);
 
             commitTransaction(session);
@@ -196,11 +195,11 @@ public class CrudOperations {
         }
     }
 
-    public static void updateStudent(int id, String newEmail) {
+    public void updateStudent(int id, String newEmail) {
         try (Session session = getCurrentSession()) {
             session.beginTransaction();
 
-            Student student = getStudent(id, session);
+            Student student = get(id, Student.class, session);
             student.setEmail(newEmail);
 
             commitTransaction(session);
@@ -211,11 +210,11 @@ public class CrudOperations {
         }
     }
 
-    public static void deleteInstructor(int id) {
+    public void deleteInstructor(int id) {
         try (Session session = getCurrentSession()) {
             session.beginTransaction();
 
-            Instructor instructor = getInstructor(id, session);
+            Instructor instructor = get(id, Instructor.class, session);
             session.delete(instructor);
 
             commitTransaction(session);
@@ -226,11 +225,11 @@ public class CrudOperations {
         }
     }
 
-    public static void deleteInstructorDetails(int id) {
+    public void deleteInstructorDetails(int id) {
         try (Session session = getCurrentSession()) {
             session.beginTransaction();
 
-            InstructorDetail instructorDetail = getInstructorDetail(id, session);
+            InstructorDetail instructorDetail = get(id, InstructorDetail.class, session);
             instructorDetail.getInstructor().setInstructorDetail(null);
 
             session.delete(instructorDetail);
@@ -242,11 +241,11 @@ public class CrudOperations {
         }
     }
 
-    public static void deleteCourse(int id) {
+    public void deleteCourse(int id) {
         try (Session session = getCurrentSession()) {
             session.beginTransaction();
 
-            Course course = getCourse(id, session);
+            Course course = get(id, Course.class, session);
 
             session.delete(course);
             commitTransaction(session);
@@ -257,11 +256,11 @@ public class CrudOperations {
         }
     }
 
-    public static void deleteReview(int id) {
+    public void deleteReview(int id) {
         try (Session session = getCurrentSession()) {
             session.beginTransaction();
 
-            Review review = getReview(id, session);
+            Review review = get(id, Review.class, session);
 
             session.delete(review);
             commitTransaction(session);
@@ -272,11 +271,11 @@ public class CrudOperations {
         }
     }
 
-    public static void deleteStudent(int id) {
+    public void deleteStudent(int id) {
         try (Session session = getCurrentSession()) {
             session.beginTransaction();
 
-            Student student = getStudent(id, session);
+            Student student = get(id, Student.class, session);
             session.delete(student);
 
             commitTransaction(session);
@@ -287,37 +286,21 @@ public class CrudOperations {
         }
     }
 
-    private static void commitTransaction(Session session) {
+    private void commitTransaction(Session session) {
         session.getTransaction().commit();
     }
 
-    private static Instructor getInstructor(int id, Session session) {
-        return session.get(Instructor.class, id);
+    private <T> T get(int id, Class<T> tClass, Session session) {
+        return session.get(tClass, id);
     }
 
-    private static InstructorDetail getInstructorDetail(int id, Session session) {
-        return session.get(InstructorDetail.class, id);
-    }
-
-    private static Course getCourse(int id, Session session) {
-        return session.get(Course.class, id);
-    }
-
-    private static Review getReview(int id, Session session) {
-        return session.get(Review.class, id);
-    }
-
-    private static Student getStudent(int id, Session session) {
-        return session.get(Student.class, id);
-    }
-
-    private static void printList(List<?> list) {
+    private void printList(List<?> list) {
         for (Object o : list) {
             System.out.println(o);
         }
     }
 
-    private static Session getCurrentSession() {
+    private Session getCurrentSession() {
         return sessionFactory.getCurrentSession();
     }
 }
