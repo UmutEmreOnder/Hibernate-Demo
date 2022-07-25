@@ -4,17 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bfb2216f-41ba-4374-b9d0-a7e5449bea68" name="Changes" comment="Remove Employee package">
-      <change afterPath="$PROJECT_DIR$/diagram.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/umutonder/database/instructor/entity/Course.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/umutonder/database/instructor/entity/Review.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/umutonder/database/instructor/entity/Student.java" afterDir="false" />
+    <list default="true" id="bfb2216f-41ba-4374-b9d0-a7e5449bea68" name="Changes" comment="ReadMe.md">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/umutonder/database/instructor/CrudOperations.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/umutonder/database/instructor/CrudOperations.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/umutonder/database/instructor/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/umutonder/database/instructor/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/umutonder/entity/Course.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/umutonder/entity/Instructor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/umutonder/database/instructor/entity/Instructor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/umutonder/entity/InstructorDetail.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/umutonder/database/instructor/entity/InstructorDetail.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,10 +56,10 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "/home/umut/IdeaProjects/Hibernate-Demo",
+    "last_opened_file_path": "/home/umut/IdeaProjects/OBSS",
     "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0"
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.11402506"
   },
   "keyToStringList": {
     "DatabaseDriversLRU": [
@@ -77,6 +69,7 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/src" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
@@ -144,7 +137,9 @@
       <updated>1658597435430</updated>
       <workItem from="1658597436826" duration="436000" />
       <workItem from="1658597883506" duration="12866000" />
-      <workItem from="1658656104190" duration="14806000" />
+      <workItem from="1658656104190" duration="15533000" />
+      <workItem from="1658728787811" duration="24000" />
+      <workItem from="1658732179361" duration="372000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Commit">
       <created>1658602251998</created>
@@ -216,7 +211,21 @@
       <option name="project" value="LOCAL" />
       <updated>1658698560601</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="@ManyToMany&#10;Students - Courses and Join Table">
+      <created>1658702037028</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1658702037028</updated>
+    </task>
+    <task id="LOCAL-00012" summary="ReadMe.md">
+      <created>1658702047716</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1658702047716</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -242,6 +251,8 @@
     <MESSAGE value="HQL for Lazy Implement" />
     <MESSAGE value="Rebase" />
     <MESSAGE value="Remove Employee package" />
-    <option name="LAST_COMMIT_MESSAGE" value="Remove Employee package" />
+    <MESSAGE value="@ManyToMany&#10;Students - Courses and Join Table" />
+    <MESSAGE value="ReadMe.md" />
+    <option name="LAST_COMMIT_MESSAGE" value="ReadMe.md" />
   </component>
 </project>
