@@ -4,9 +4,29 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bfb2216f-41ba-4374-b9d0-a7e5449bea68" name="Changes" comment="ReadMe.md">
+    <list default="true" id="bfb2216f-41ba-4374-b9d0-a7e5449bea68" name="Changes" comment="Methods are non-static, generic get method">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/umutonder/database/instructor/daoDp/BaseDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/umutonder/database/instructor/daoDp/Factory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/umutonder/database/instructor/daoDp/course/CourseDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/umutonder/database/instructor/daoDp/course/CourseDaoImp.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/umutonder/database/instructor/daoDp/course/CourseDemo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/umutonder/database/instructor/daoDp/instructor/InstructorDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/umutonder/database/instructor/daoDp/instructor/InstructorDaoImp.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/umutonder/database/instructor/daoDp/instructor/InstructorDemo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/umutonder/database/instructor/daoDp/instructorDetail/InstructorDetailDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/umutonder/database/instructor/daoDp/instructorDetail/InstructorDetailDaoImp.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/umutonder/database/instructor/daoDp/instructorDetail/InstructorDetailDemo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/umutonder/database/instructor/daoDp/review/ReviewDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/umutonder/database/instructor/daoDp/review/ReviewDaoImp.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/umutonder/database/instructor/daoDp/review/ReviewDemo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/umutonder/database/instructor/daoDp/student/StudentDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/umutonder/database/instructor/daoDp/student/StudentDaoImp.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/umutonder/database/instructor/daoDp/student/StudentDemo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/umutonder/database/instructor/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/umutonder/database/instructor/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/umutonder/database/instructor/CrudOperations.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/umutonder/database/instructor/Main.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,6 +36,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="AnnotationType" />
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -56,10 +78,11 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "/home/umut/IdeaProjects/OBSS",
+    "last_opened_file_path": "/home/umut/IdeaProjects/Hibernate-Demo/src/main/java/org/umutonder/database/instructor/daoDp/student",
     "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.11402506"
+    "project.structure.proportion": "0.1787176",
+    "project.structure.side.proportion": "0.21065573",
+    "settings.editor.selected.configurable": "preferences.lookFeel"
   },
   "keyToStringList": {
     "DatabaseDriversLRU": [
@@ -69,8 +92,11 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/java/org/umutonder/database/instructor/daoDp/student" />
+      <recent name="$PROJECT_DIR$/src/main/java/org/umutonder/database/instructor/daoDp/review" />
+      <recent name="$PROJECT_DIR$/src/main/java/org/umutonder/database/instructor/daoDp/instructorDetail" />
+      <recent name="$PROJECT_DIR$/src/main/java/org/umutonder/database/instructor/daoDp/instructor" />
       <recent name="$PROJECT_DIR$" />
-      <recent name="$PROJECT_DIR$/src" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/main/java/resources" />
@@ -81,13 +107,13 @@
       <recent name="org.umutonder.database.instructor" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.org.umutonder.database.instructor.Main">
-    <configuration name="CrudOperations" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="org.umutonder.database.employee.CrudOperations" />
+  <component name="RunManager" selected="Application.StudentDemo">
+    <configuration name="InstructorDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.umutonder.database.instructor.daoDp.instructor.InstructorDemo" />
       <module name="Hibernate-Demo" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.umutonder.database.employee.*" />
+          <option name="PATTERN" value="org.umutonder.database.instructor.daoDp.instructor.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -95,12 +121,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="org.umutonder.database.employee.Main" />
+    <configuration name="InstructorDetailDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.umutonder.database.instructor.daoDp.instructorDetail.InstructorDetailDemo" />
       <module name="Hibernate-Demo" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.umutonder.database.employee.*" />
+          <option name="PATTERN" value="org.umutonder.database.instructor.daoDp.instructorDetail.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -108,12 +134,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="org.umutonder.database.instructor.Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="org.umutonder.database.instructor.Main" />
+    <configuration name="ReviewDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.umutonder.database.instructor.daoDp.review.ReviewDemo" />
       <module name="Hibernate-Demo" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.umutonder.database.instructor.*" />
+          <option name="PATTERN" value="org.umutonder.database.instructor.daoDp.review.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -121,9 +147,48 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="StudentDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.umutonder.database.instructor.daoDp.student.StudentDemo" />
+      <module name="Hibernate-Demo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.umutonder.database.instructor.daoDp.student.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="org.umutonder.database.instructor.daoDp.course.CourseDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="ALTERNATIVE_JRE_PATH" value="openjdk-18" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="MAIN_CLASS_NAME" value="org.umutonder.database.instructor.daoDp.course.CourseDemo" />
+      <module name="Hibernate-Demo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.umutonder.database.instructor.daoDp.course.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.org.umutonder.database.instructor.daoDp.review.InstructorDetailDemo" />
+      <item itemvalue="Application.ReviewDemo" />
+      <item itemvalue="Application.StudentDemo" />
+      <item itemvalue="Application.InstructorDemo" />
+      <item itemvalue="Application.org.umutonder.database.instructor.daoDp.course.CourseDemo" />
+    </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.org.umutonder.database.instructor.Main" />
+        <item itemvalue="Application.StudentDemo" />
+        <item itemvalue="Application.ReviewDemo" />
+        <item itemvalue="Application.org.umutonder.database.instructor.daoDp.course.CourseDemo" />
+        <item itemvalue="Application.org.umutonder.database.instructor.daoDp.review.InstructorDetailDemo" />
+        <item itemvalue="Application.InstructorDemo" />
       </list>
     </recent_temporary>
   </component>
@@ -140,6 +205,12 @@
       <workItem from="1658656104190" duration="15533000" />
       <workItem from="1658728787811" duration="24000" />
       <workItem from="1658732179361" duration="372000" />
+      <workItem from="1658732615586" duration="827000" />
+      <workItem from="1658781867641" duration="2659000" />
+      <workItem from="1658784539847" duration="450000" />
+      <workItem from="1658785000051" duration="3176000" />
+      <workItem from="1658817531468" duration="50000" />
+      <workItem from="1658855235498" duration="949000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Commit">
       <created>1658602251998</created>
@@ -225,7 +296,28 @@
       <option name="project" value="LOCAL" />
       <updated>1658702047716</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Set logger level to off">
+      <created>1658732831750</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1658732831750</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Methods are non-static, generic get method">
+      <created>1658782677188</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1658782677188</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Methods are non-static, generic get method">
+      <created>1658782717475</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1658782717475</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -253,6 +345,8 @@
     <MESSAGE value="Remove Employee package" />
     <MESSAGE value="@ManyToMany&#10;Students - Courses and Join Table" />
     <MESSAGE value="ReadMe.md" />
-    <option name="LAST_COMMIT_MESSAGE" value="ReadMe.md" />
+    <MESSAGE value="Set logger level to off" />
+    <MESSAGE value="Methods are non-static, generic get method" />
+    <option name="LAST_COMMIT_MESSAGE" value="Methods are non-static, generic get method" />
   </component>
 </project>
